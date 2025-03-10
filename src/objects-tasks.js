@@ -480,35 +480,27 @@ class CssSelector {
 }
 
 const cssSelectorBuilder = {
-  res: '',
-
   element(value) {
-    this.res += value;
     return new CssSelector().element(value);
   },
 
   id(value) {
-    this.res += `#${value}`;
     return new CssSelector().id(value);
   },
 
   class(value) {
-    this.res += `.${value}`;
     return new CssSelector().class(value);
   },
 
   attr(value) {
-    this.res += `[${value}]`;
     return new CssSelector().attr(value);
   },
 
   pseudoClass(value) {
-    this.res += `:${value}`;
     return new CssSelector().pseudoClass(value);
   },
 
   pseudoElement(value) {
-    this.res += `::${value}`;
     return new CssSelector().pseudoElement(value);
   },
 
